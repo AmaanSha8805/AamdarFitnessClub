@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-text-primary antialiased;
+  }
+
+  ::selection {
+    @apply bg-primary/40 text-white;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-background;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply rounded-full bg-border-light;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-primary/60;
+  }
+}
+
+@layer components {
+  .section-padding {
+    @apply px-4 py-20 sm:px-6 lg:px-8 lg:py-28;
+  }
+
+  .section-title {
+    @apply text-4xl font-black uppercase tracking-tight sm:text-5xl lg:text-6xl;
+  }
+
+  .section-subtitle {
+    @apply mt-4 max-w-2xl text-lg text-text-secondary;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-white via-white to-text-secondary bg-clip-text text-transparent;
+  }
+
+  .accent-text {
+    @apply text-primary;
+  }
+
+  .glass-card {
+    @apply rounded-2xl border border-white/10 bg-background-glass backdrop-blur-xl shadow-glass;
+  }
+
+  .glass-card-hover {
+    @apply glass-card transition-all duration-500 ease-out hover:border-primary/30 hover:shadow-neon-sm hover:-translate-y-1;
+  }
+
+  .smooth-all {
+    @apply transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)];
+  }
+
+  .premium-btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-primary px-8 py-4 text-sm font-bold uppercase tracking-wider text-white transition-all duration-300 hover:bg-primary-hover hover:shadow-neon hover:scale-[1.02] active:scale-[0.98];
+  }
+
+  .premium-btn-outline {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border-2 border-white/20 bg-transparent px-8 py-4 text-sm font-bold uppercase tracking-wider text-white backdrop-blur-sm transition-all duration-300 hover:border-primary hover:text-primary hover:shadow-neon-sm;
+  }
+
+  .mega-type {
+    @apply text-5xl font-black uppercase leading-[0.9] tracking-tighter sm:text-7xl lg:text-8xl xl:text-9xl;
+  }
+}
