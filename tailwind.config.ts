@@ -10,11 +10,11 @@ const config: Config = {
     extend: {
       colors: {
         primary: {
-          DEFAULT: "#E50914",
-          hover: "#C40812",
-          light: "#FF1A26",
-          dark: "#9B0610",
-          glow: "rgba(229, 9, 20, 0.4)",
+          DEFAULT: "#D4AF37",
+          hover: "#B8962E",
+          light: "#F0D78C",
+          dark: "#8B7355",
+          glow: "rgba(212, 175, 55, 0.4)",
         },
         background: {
           DEFAULT: "#000000",
@@ -32,20 +32,29 @@ const config: Config = {
           muted: "#666666",
         },
         success: "#00FF88",
+        gold: {
+          DEFAULT: "#D4AF37",
+          light: "#F0D78C",
+          dark: "#B8962E",
+          muted: "#8B7355",
+          glow: "rgba(212, 175, 55, 0.35)",
+        },
       },
       fontFamily: {
-        sans: ["var(--font-inter)", "Inter", "system-ui", "sans-serif"],
-        display: ["var(--font-inter)", "Inter", "system-ui", "sans-serif"],
+        sans: ["Inter", "system-ui", "sans-serif"],
+        display: ["Inter", "system-ui", "sans-serif"],
       },
       boxShadow: {
-        neon: "0 0 40px rgba(229, 9, 20, 0.35)",
-        "neon-sm": "0 0 20px rgba(229, 9, 20, 0.25)",
+        neon: "0 0 40px rgba(212, 175, 55, 0.35)",
+        "neon-sm": "0 0 20px rgba(212, 175, 55, 0.25)",
+        "gold-glow": "0 0 32px rgba(212, 175, 55, 0.35), 0 0 64px rgba(212, 175, 55, 0.12)",
+        "gold-glow-sm": "0 0 20px rgba(212, 175, 55, 0.25)",
         card: "0 8px 32px rgba(0, 0, 0, 0.6)",
         glass: "0 8px 32px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255,255,255,0.05)",
       },
       backgroundImage: {
         "hero-gradient":
-          "radial-gradient(ellipse 80% 60% at 70% 40%, rgba(229,9,20,0.15) 0%, transparent 60%)",
+          "radial-gradient(ellipse 80% 60% at 70% 40%, rgba(212,175,55,0.12) 0%, transparent 60%)",
         "card-gradient":
           "linear-gradient(135deg, rgba(255,255,255,0.05) 0%, transparent 50%)",
       },
@@ -69,8 +78,8 @@ const config: Config = {
           "50%": { transform: "translateY(-12px)" },
         },
         pulseGlow: {
-          "0%, 100%": { boxShadow: "0 0 30px rgba(229, 9, 20, 0.2)" },
-          "50%": { boxShadow: "0 0 50px rgba(229, 9, 20, 0.45)" },
+          "0%, 100%": { boxShadow: "0 0 30px rgba(212, 175, 55, 0.2)" },
+          "50%": { boxShadow: "0 0 50px rgba(212, 175, 55, 0.45)" },
         },
       },
     },

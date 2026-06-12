@@ -65,7 +65,7 @@ export const EQUIPMENT_LIST: EquipmentItem[] = [
   {
     id: "lat-pulldown",
     name: "Lat Pulldown",
-    image: "https://images.unsplash.com/photo-1597452485669-b2090d94691a?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=600&q=80&auto=format&fit=crop",
     summary: "Cable pulldown station for building a wide, strong back and improving pull-up strength.",
     muscles: ["Latissimus Dorsi", "Biceps", "Rear Deltoids"],
     videoUrl: "https://www.youtube.com/embed/CAwf7n6Luuc",
@@ -97,7 +97,7 @@ export const EQUIPMENT_LIST: EquipmentItem[] = [
   {
     id: "leg-curl",
     name: "Leg Curl Machine",
-    image: "https://images.unsplash.com/photo-1434682881908-b43d05f5b870?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=600&q=80&auto=format&fit=crop",
     summary: "Isolation machine targeting hamstrings for balanced leg development and injury prevention.",
     muscles: ["Hamstrings", "Calves"],
     videoUrl: "https://www.youtube.com/embed/ELOCsoDSmrg",
@@ -145,7 +145,7 @@ export const EQUIPMENT_LIST: EquipmentItem[] = [
   {
     id: "treadmill",
     name: "Treadmill",
-    image: "https://images.unsplash.com/photo-1576678927486-cc907957088c?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=600&q=80&auto=format&fit=crop",
     summary: "Commercial-grade treadmills for cardio, HIIT intervals & incline walking sessions.",
     muscles: ["Cardiovascular", "Legs", "Core"],
     videoUrl: "https://www.youtube.com/embed/54x2WF1_Suc",

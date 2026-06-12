@@ -31,7 +31,7 @@ const TOOLS = [
 export function AIToolsSection() {
   return (
     <section className="section-padding relative overflow-hidden bg-black">
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(229,9,20,0.06)_0%,_transparent_60%)]" />
+
       <div className="relative mx-auto max-w-7xl">
         <ScrollReveal className="mb-16 text-center">
           <span className="text-xs font-bold uppercase tracking-[0.3em] text-primary">

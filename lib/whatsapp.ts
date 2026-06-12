@@ -14,29 +14,38 @@ export async function sendWhatsAppMessage(payload: WhatsAppPayload): Promise<boo
     console.warn("WhatsApp API credentials not configured");
     return false;
   }
-
-  try {
-    const response = await fetch(
-      `https://graph.facebook.com/v18.0/${phoneNumberId}/messages`,
-      {
-        method: "POST",
-        headers: {
-          Authorization: `Bearer ${token}`,
-          "Content-Type": "application/json",
+try {
+  const response = await fetch(
+    `https://graph.facebook.com/v18.0/${phoneNumberId}/messages`,
+    {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${token}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        messaging_product: "whatsapp",
+        to: payload.phone.replace(/\D/g, ""),
+        type: "text",
+        text: {
+          body: payload.message,
         },
-        body: JSON.stringify({
-          messaging_product: "whatsapp",
-          to: payload.phone.replace(/\D/g, ""),
-          type: "text",
-          text: { body: payload.message },
-        }),
-      }
-    );
-    return response.ok;
-  } catch (error) {
-    console.error("WhatsApp send error:", error);
-    return false;
-  }
+      }),
+    }
+  );
+
+  const data = await response.json();
+
+  console.log("=================================");
+  console.log("WhatsApp Status:", response.status);
+  console.log("WhatsApp Response:", data);
+  console.log("=================================");
+
+  return response.ok;
+} catch (error) {
+  console.error("WhatsApp send error:", error);
+  return false;
+}
 }
 
 export async function triggerN8NWebhook(

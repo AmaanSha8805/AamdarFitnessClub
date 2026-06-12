@@ -4,11 +4,9 @@ import {
   createContext,
   useCallback,
   useContext,
-  useEffect,
   useState,
 } from "react";
 import {
-  GENDER_STORAGE_KEY,
   type Gender,
   GENDER_CONTENT,
   type GenderContent,
@@ -17,53 +15,35 @@ import {
 interface GenderContextValue {
   gender: Gender | null;
   content: GenderContent;
-  isLoading: boolean;
   hasSelected: boolean;
   setGender: (gender: Gender) => void;
-  skipPersonalization: () => void;
   resetGender: () => void;
 }
 
 const GenderContext = createContext<GenderContextValue | null>(null);
 
 export function GenderProvider({ children }: { children: React.ReactNode }) {
-  const [gender, setGenderState] = useState<Gender | null>(null);
-  const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(() => {
-    const stored = localStorage.getItem(GENDER_STORAGE_KEY) as Gender | null;
-    if (stored === "male" || stored === "female") {
-      setGenderState(stored);
-    }
-    setIsLoading(false);
-  }, []);
+  const [genderState, setGenderState] = useState<Gender | null>(null);
 
   const setGender = useCallback((g: Gender) => {
-    localStorage.setItem(GENDER_STORAGE_KEY, g);
+    // Simply set memory state without persisting
     setGenderState(g);
   }, []);
 
-  const skipPersonalization = useCallback(() => {
-    setGender("male");
-  }, [setGender]);
-
   const resetGender = useCallback(() => {
-    localStorage.removeItem(GENDER_STORAGE_KEY);
     setGenderState(null);
   }, []);
 
-  const activeGender: Gender = gender ?? "male";
+  const activeGender: Gender = genderState ?? "male";
   const content = GENDER_CONTENT[activeGender];
 
   return (
     <GenderContext.Provider
       value={{
-        gender,
+        gender: genderState,
         content,
-        isLoading,
-        hasSelected: gender !== null,
+        hasSelected: genderState !== null,
         setGender,
-        skipPersonalization,
         resetGender,
       }}
     >

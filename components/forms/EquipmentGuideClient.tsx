@@ -1,6 +1,7 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useSearchParams } from "next/navigation";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import {
@@ -142,8 +143,17 @@ function EquipmentModal({
 }
 
 export function EquipmentGuideClient() {
+  const searchParams = useSearchParams();
   const [selected, setSelected] = useState<EquipmentItem | null>(null);
   const [scanMode, setScanMode] = useState(false);
+
+  useEffect(() => {
+    const eqId = searchParams.get("eq");
+    if (eqId) {
+      const item = EQUIPMENT_LIST.find((e) => e.id === eqId);
+      if (item) setSelected(item);
+    }
+  }, [searchParams]);
 
   return (
     <>

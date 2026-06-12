@@ -82,12 +82,13 @@ export function generateStaticParams() {
   return Object.keys(POSTS).map((slug) => ({ slug }));
 }
 
-export default function BlogPostPage({
+export default async function BlogPostPage({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }) {
-  const post = POSTS[params.slug];
+  const { slug } = await params;
+  const post = POSTS[slug];
   if (!post) notFound();
 
   return (

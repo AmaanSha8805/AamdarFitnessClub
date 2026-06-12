@@ -12,7 +12,7 @@ export function generateSEO({
   title,
   description,
   path = "",
-  image = "/og-image.jpg",
+  image = "/images/logo.png",
 }: SEOProps): Metadata {
   const url = `${GYM.siteUrl}${path}`;
   const fullTitle = path === "/" || path === ""

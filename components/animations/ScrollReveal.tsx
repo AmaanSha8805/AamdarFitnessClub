@@ -19,19 +19,8 @@ const getVariants = (direction: string): Variants => {
   const offset = offsets[direction as keyof typeof offsets] || offsets.up;
 
   return {
-    hidden: { opacity: 0, ...offset, filter: "blur(4px)" },
-    visible: {
-      opacity: 1,
-      x: 0,
-      y: 0,
-      filter: "blur(0px)",
-      transition: {
-        type: "spring",
-        stiffness: 80,
-        damping: 18,
-        mass: 0.8,
-      },
-    },
+    hidden: { opacity: 0, ...offset },
+    visible: { opacity: 1, x: 0, y: 0 },
   };
 };
 
@@ -46,9 +35,14 @@ export function ScrollReveal({
       className={className}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, margin: "-60px", amount: 0.15 }}
+      viewport={{ once: true, margin: "-60px" }}
       variants={getVariants(direction)}
-      transition={{ delay }}
+      transition={{
+        duration: 0.6,
+        delay,
+        ease: [0.25, 0.46, 0.45, 0.94],
+      }}
+      style={{ willChange: "transform, opacity" }}
     >
       {children}
     </motion.div>

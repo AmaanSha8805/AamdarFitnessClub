@@ -9,6 +9,9 @@
 
   body {
     @apply bg-background text-text-primary antialiased;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
   ::selection {
@@ -58,19 +61,23 @@
   }
 
   .glass-card-hover {
-    @apply glass-card transition-all duration-500 ease-out hover:border-primary/30 hover:shadow-neon-sm hover:-translate-y-1;
+    @apply glass-card transition-all duration-200 ease-out hover:border-primary/30 hover:shadow-xl hover:-translate-y-1;
   }
 
   .smooth-all {
-    @apply transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)];
+    @apply transition-all duration-200 ease-[cubic-bezier(0.22, 1, 0.36, 1)];
   }
 
   .premium-btn {
-    @apply inline-flex items-center justify-center gap-2 rounded-full bg-primary px-8 py-4 text-sm font-bold uppercase tracking-wider text-white transition-all duration-300 hover:bg-primary-hover hover:shadow-neon hover:scale-[1.02] active:scale-[0.98];
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-gold px-8 py-4 text-sm font-bold uppercase tracking-wider text-black transition-all duration-200 hover:bg-gold-light hover:shadow-gold-glow hover:scale-[1.02] active:scale-[0.98];
   }
 
   .premium-btn-outline {
-    @apply inline-flex items-center justify-center gap-2 rounded-full border-2 border-white/20 bg-transparent px-8 py-4 text-sm font-bold uppercase tracking-wider text-white backdrop-blur-sm transition-all duration-300 hover:border-primary hover:text-primary hover:shadow-neon-sm;
+    @apply inline-flex items-center justify-center gap-2 rounded-full border-2 border-white/20 bg-transparent px-8 py-4 text-sm font-bold uppercase tracking-wider text-white backdrop-blur-sm transition-all duration-200 hover:border-gold hover:text-gold hover:shadow-gold-glow-sm;
+  }
+
+  .manager-portal ::selection {
+    @apply bg-gold/30 text-white;
   }
 
   .mega-type {

@@ -13,7 +13,9 @@ export function Navbar() {
   const pathname = usePathname();
 
   const isAuthPage =
-    pathname.startsWith("/portal") || pathname.startsWith("/dashboard");
+    pathname.startsWith("/portal") ||
+    pathname.startsWith("/manager-dashboard") ||
+    pathname.startsWith("/manager-login");
 
   if (isAuthPage) return null;
 

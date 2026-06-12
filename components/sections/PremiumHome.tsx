@@ -1,31 +1,27 @@
-"use client";
-
 import { PremiumHero } from "./PremiumHero";
+import { ImportantNotice } from "./ImportantNotice";
 import { StatsBar } from "./StatsBar";
-import { FeatureGrid } from "./FeatureGrid";
+import { AboutGym } from "./AboutGym";
+import { GymTourSection } from "./GymTourSection";
 import { EquipmentSection } from "./EquipmentSection";
-import { TrainerSpotlight } from "./TrainerSpotlight";
-import { ProgramsSection } from "./ProgramsSection";
-import { SuccessStories } from "./SuccessStories";
-import { TestimonialsSection } from "./TestimonialsSection";
-import { AIToolsSection } from "./AIToolsSection";
+import { TrainersPreview } from "./TrainersPreview";
 import { MembershipPreview } from "./MembershipPreview";
 import { CTASection } from "./CTASection";
+import { PremiumMaps } from "./PremiumMaps";
 
 export function PremiumHome() {
   return (
     <>
       <PremiumHero />
+      <ImportantNotice />
       <StatsBar />
-      <FeatureGrid />
+      <AboutGym />
+      <GymTourSection />
       <EquipmentSection />
-      <TrainerSpotlight />
-      <ProgramsSection />
-      <SuccessStories />
-      <AIToolsSection />
-      <TestimonialsSection />
+      <TrainersPreview />
       <MembershipPreview />
       <CTASection />
+      <PremiumMaps />
     </>
   );
 }

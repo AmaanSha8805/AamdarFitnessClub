@@ -1,6 +1,6 @@
-export type Gender = "male" | "female";
+import { MEDIA } from "@/lib/media-urls";
 
-export const GENDER_STORAGE_KEY = "gender";
+export type Gender = "male" | "female";
 
 export interface Program {
   title: string;
@@ -46,10 +46,8 @@ export interface GenderContent {
   testimonials: Testimonial[];
 }
 
-const MALE_HERO =
-  "https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=1200&q=80";
-const FEMALE_HERO =
-  "https://images.unsplash.com/photo-1518611012118-696072aa579a?w=1200&q=80";
+const MALE_HERO = MEDIA.maleTrainer;
+const FEMALE_HERO = MEDIA.femaleTrainer;
 
 export const GENDER_CONTENT: Record<Gender, GenderContent> = {
   male: {
@@ -60,40 +58,40 @@ export const GENDER_CONTENT: Record<Gender, GenderContent> = {
     subheadline:
       "Transform your body with elite training, modern equipment, and expert coaching.",
     featuredTrainer: {
-      name: "Coach Arjun Mehta",
-      specialization: "Muscle Building & Strength Training",
-      experienceYears: 8,
-      bio: "Former state-level powerlifter with 8 years of coaching experience. Arjun specializes in transforming beginners into confident lifters and helping advanced athletes break plateaus with science-backed programming.",
-      certifications: ["ACE Certified", "Sports Nutrition", "Powerlifting Coach"],
-      image: "https://images.unsplash.com/photo-1567013127542-490d757e51fc?w=800&q=80",
+      name: "SHRIKANT BALASAHEB KALE",
+      specialization: "Bodybuilding & Strength Training",
+      experienceYears: 7,
+      bio: "National-Level Volleyball Player and Head Fitness Trainer with 7+ years of coaching. Specializes in muscle building, strength development, and fitness transformation.",
+      certifications: ["Certified Fitness Trainer", "Bodybuilding Specialist", "Strength & Conditioning"],
+      image: MEDIA.shrikant,
     },
     programs: [
       {
         title: "Muscle Building",
         description: "Hypertrophy-focused programs for maximum muscle growth.",
         image:
-          "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=600&q=80",
+          "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=600&q=80&fm=webp&auto=format",
         duration: "12 Weeks",
       },
       {
         title: "Strength Training",
         description: "Build raw power with compound lifts and progressive overload.",
         image:
-          "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=600&q=80",
+          "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=600&q=80&fm=webp&auto=format",
         duration: "8 Weeks",
       },
       {
         title: "Powerlifting",
         description: "Master the squat, bench, and deadlift with expert coaching.",
         image:
-          "https://images.unsplash.com/photo-1597452485669-b2090d94691a?w=600&q=80",
+          "https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=600&q=80&fm=webp&auto=format",
         duration: "16 Weeks",
       },
       {
         title: "Fat Loss",
         description: "Shred fat while preserving muscle with science-backed protocols.",
         image:
-          "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=600&q=80",
+          "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=600&q=80&fm=webp&auto=format",
         duration: "10 Weeks",
       },
     ],
@@ -104,7 +102,7 @@ export const GENDER_CONTENT: Record<Gender, GenderContent> = {
         duration: "6 Months",
         quote: "AAMDAR changed my life. The trainers pushed me beyond what I thought possible.",
         image:
-          "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80",
+          "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80&fm=webp&auto=format",
       },
       {
         name: "Amit Deshmukh",
@@ -112,7 +110,7 @@ export const GENDER_CONTENT: Record<Gender, GenderContent> = {
         duration: "8 Months",
         quote: "From skinny to strong. The powerlifting program here is world-class.",
         image:
-          "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&q=80",
+          "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&q=80&fm=webp&auto=format",
       },
       {
         name: "Vikram Patil",
@@ -120,7 +118,7 @@ export const GENDER_CONTENT: Record<Gender, GenderContent> = {
         duration: "5 Months",
         quote: "The combination of training and nutrition guidance delivered real results.",
         image:
-          "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&q=80",
+          "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&q=80&fm=webp&auto=format",
       },
     ],
     testimonials: [
@@ -131,7 +129,7 @@ export const GENDER_CONTENT: Record<Gender, GenderContent> = {
           "Best gym in Parbhani, hands down. The equipment rivals any metro city gym and the AI coach is a game-changer.",
         rating: 5,
         image:
-          "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&q=80",
+          "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&q=80&fm=webp&auto=format",
       },
       {
         name: "Amit K.",
@@ -140,7 +138,7 @@ export const GENDER_CONTENT: Record<Gender, GenderContent> = {
           "The trainers here actually know what they're doing. My squat went from 80kg to 160kg in under a year.",
         rating: 5,
         image:
-          "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&q=80",
+          "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&q=80&fm=webp&auto=format",
       },
       {
         name: "Sandeep M.",
@@ -149,7 +147,7 @@ export const GENDER_CONTENT: Record<Gender, GenderContent> = {
           "Premium experience at an affordable price. The QR equipment guides helped me train confidently from day one.",
         rating: 5,
         image:
-          "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&q=80",
+          "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&q=80&fm=webp&auto=format",
       },
     ],
   },
@@ -161,40 +159,40 @@ export const GENDER_CONTENT: Record<Gender, GenderContent> = {
     subheadline:
       "Build strength, confidence, and a healthier lifestyle with expert guidance.",
     featuredTrainer: {
-      name: "Coach Priya Deshmukh",
+      name: "GAURI RAJENDRA DHARURKAR",
       specialization: "Women's Fitness & Body Transformation",
-      experienceYears: 6,
-      bio: "Certified women's fitness specialist who has guided 200+ women through transformative journeys. Priya creates empowering, results-driven programs focused on strength, toning, and sustainable lifestyle change.",
-      certifications: ["ISSA Certified", "Pre/Post Natal", "Nutrition Specialist"],
-      image: "https://images.unsplash.com/photo-1594381898411-846e7d193883?w=800&q=80",
+      experienceYears: 15,
+      bio: "Senior Fitness Trainer and Certified Yoga Instructor guiding members through strength, toning, and confidence-building programs.",
+      certifications: ["Certified Yoga Teacher", "Fitness Transformation Coach", "Wellness Coaching"],
+      image: MEDIA.gauri,
     },
     programs: [
       {
         title: "Weight Loss",
         description: "Sustainable fat loss with strength-preserving workouts.",
         image:
-          "https://images.unsplash.com/photo-1518611012118-696072aa579a?w=600&q=80",
+          "https://images.unsplash.com/photo-1518611012118-696072aa579a?w=600&q=80&fm=webp&auto=format",
         duration: "10 Weeks",
       },
       {
         title: "Toning",
         description: "Sculpt and define with targeted resistance training.",
         image:
-          "https://images.unsplash.com/photo-1594381898411-846e7d193883?w=600&q=80",
+          "https://images.unsplash.com/photo-1594381898411-846e7d193883?w=600&q=80&fm=webp&auto=format",
         duration: "8 Weeks",
       },
       {
         title: "Functional Fitness",
         description: "Move better, feel stronger with real-world movement patterns.",
         image:
-          "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&q=80",
+          "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&q=80&fm=webp&auto=format",
         duration: "6 Weeks",
       },
       {
         title: "Strength Training",
         description: "Build confidence and power with progressive strength work.",
         image:
-          "https://images.unsplash.com/photo-1518310383802-640c2ed31132?w=600&q=80",
+          "https://images.unsplash.com/photo-1518310383802-640c2ed31132?w=600&q=80&fm=webp&auto=format",
         duration: "12 Weeks",
       },
     ],
@@ -205,7 +203,7 @@ export const GENDER_CONTENT: Record<Gender, GenderContent> = {
         duration: "5 Months",
         quote: "I never thought I could lift weights. Now I deadlift 80kg and feel unstoppable.",
         image:
-          "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&q=80",
+          "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&q=80&fm=webp&auto=format",
       },
       {
         name: "Sneha Kulkarni",
@@ -213,7 +211,7 @@ export const GENDER_CONTENT: Record<Gender, GenderContent> = {
         duration: "7 Months",
         quote: "The female trainers understood my goals perfectly. I feel stronger than ever.",
         image:
-          "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&q=80",
+          "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&q=80&fm=webp&auto=format",
       },
       {
         name: "Anjali Rao",
@@ -221,7 +219,7 @@ export const GENDER_CONTENT: Record<Gender, GenderContent> = {
         duration: "4 Months",
         quote: "The supportive community here made all the difference. Every session feels empowering.",
         image:
-          "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400&q=80",
+          "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400&q=80&fm=webp&auto=format",
       },
     ],
     testimonials: [
@@ -232,7 +230,7 @@ export const GENDER_CONTENT: Record<Gender, GenderContent> = {
           "Finally a gym that takes women's fitness seriously. No judgment, just results and support.",
         rating: 5,
         image:
-          "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&q=80",
+          "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&q=80&fm=webp&auto=format",
       },
       {
         name: "Sneha K.",
@@ -241,7 +239,7 @@ export const GENDER_CONTENT: Record<Gender, GenderContent> = {
           "The toning program transformed not just my body but my entire mindset. Highly recommend!",
         rating: 5,
         image:
-          "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&q=80",
+          "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&q=80&fm=webp&auto=format",
       },
       {
         name: "Anjali R.",
@@ -250,7 +248,7 @@ export const GENDER_CONTENT: Record<Gender, GenderContent> = {
           "AI workout generator gave me a plan I could actually follow. Lost 12kg and kept it off.",
         rating: 5,
         image:
-          "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&q=80",
+          "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&q=80&fm=webp&auto=format",
       },
     ],
   },
