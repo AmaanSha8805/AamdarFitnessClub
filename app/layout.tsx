@@ -47,9 +47,12 @@ export const metadata: Metadata = {
     icon: [{ url: "/favicon.ico", sizes: "any" }],
     apple: [{ url: "/images/logo.png", sizes: "180x180", type: "image/png" }],
   },
-  robots: {
+ robots: {
     index: true,
     follow: true,
+  },
+  verification: {
+    google: "eT9aWQNJNaglLhmd-kgLDFOdOIz0ll3uXnqZJP0yzOQ",
   },
 };
 
